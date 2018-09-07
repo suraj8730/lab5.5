@@ -1,20 +1,47 @@
 #include <iostream>
-using namespace std;
-int main()
+	using namespace std;
+	int main()
 	{
-	for(int i=0;i<5;i++)
-		{ for(int a=5;a>0;a--)
-			{cout<<" ";}
+	int A;
+	cout<<"Enter number of rows for your pattern"<<endl;
+	cin>>A;
+	for(int i=0;i<A;i++)
+		{
+		//for initial space
+		 for(int a=(A-i-1);a>0;a--)
+			{
+			cout<<" ";
+		}
+		//for first row star
 		for(int b=0;b<1;b++)
-			{cout<<"*";}
-		if (i=0 or i=4)for (int j=0;j<<( (2*i)+1);j++)
-			{cout<<" ";}
-		for(int b=0;b<1;b++)
-			{cout<<"*";}
-		//for space
-		//for star
-		//for space
-		//for star
-		cout<<endl;
-}
+			{	
+			cout<<"*";
+		}
+		//for midlle part
+		if (i==(A-1))
+			//for star
+			{
+			for(int a=0;a<(A*2-3);a++)
+				{
+				cout<<"*";
+			}
+		}
+			//for space
+		else 
+			{
+			for (int j=1;j< (2*i);j++)
+				{
+				cout<<" ";
+				}
+		}
+		//for last row star
+		if (i>0)
+			{
+			for(int b=0;b<1;b++)
+				{
+				cout<<"*";
+			}
+		}
+	cout<<endl;
+	}
 }
